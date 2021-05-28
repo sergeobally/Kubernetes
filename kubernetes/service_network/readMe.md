@@ -1,4 +1,4 @@
-# Commands used for this tp3
+# Creation app in production with a loadbalancer (nodePort) which switch between pods
 ## Creation namespace production
 * kubectl create -f ./my-namespace.yaml
 ## Creation Service (implicit loadbalancer)
