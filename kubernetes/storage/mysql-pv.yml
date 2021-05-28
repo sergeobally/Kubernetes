@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-pv
+  labels:
+    app: mysql
+spec:
+  strategy:
+    type: Recreate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - image: mysql:5.6
+        name: mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        - name: MYSQL_DATABASE
+          value: "eazytraining"
+        - name: MYSQL_USER
+          value: "eazy"
+        - name: MYSQL_PASSWORD
+          value: "eazy"
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: data-pvc
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: data-pvc
+        persistentVolumeClaim:
+          claimName: mysql-pvc
