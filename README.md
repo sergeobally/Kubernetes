@@ -1,3 +1,3 @@
-# devopsTraining
-Mainly use for my devOps training
-It will contain mainly config files and command to run in order to deploy architectures and automatisation with Docker, Kubernetes, Terraform ....
+# devops
+- It contains different small apps build with devops tools
+- All about architectures and automatisation with Docker, Kubernetes, Terraform ....
