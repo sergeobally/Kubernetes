@@ -1,4 +1,4 @@
-# Creation app in production with a loadbalancer (nodePort) which switch between pods
+# Creation app in production with a loadbalancer (nodePort) switching among pods
 - Creation namespace production
 ```console
 kubectl create -f ./my-namespace.yaml
