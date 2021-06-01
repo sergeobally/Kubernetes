@@ -1,4 +1,4 @@
 # devops
-It contains different small apps build with devops tools
+It contains different small apps built with devops tools
 
 All about architectures and automatisation with Docker, Kubernetes, Terraform ....
